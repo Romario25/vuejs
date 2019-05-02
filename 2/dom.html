@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="app">
+    <h1 ref="heading">{{ text }}</h1>
+    <button @click="updateText">Update</button>
+</div>
+
+
+
+
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            text: "Text"
+        },
+        methods: {
+            updateText: function() {
+                this.text = 'New text';
+                console.log(this.$refs);
+                this.$refs.heading.style.color = 'red';
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
