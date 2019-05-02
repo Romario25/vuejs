@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    <input type="text" @input="inputValue = $event.target.value" :value="inputValue">-->
+
+    <input type="text" v-model="inputValue">
+
+    <h2 >
+        {{ inputValue}}
+    </h2>
+</div>
+
+
+
+
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            inputValue: 'Initial value'
+        },
+    })
+</script>
+</body>
+</html>
